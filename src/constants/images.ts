@@ -1,4 +1,6 @@
 export default {
-    turtle: require('../../assets/images/turtle.jpg'), // Adjust the path as needed
+    turtle: require('../../assets/images/turtle.jpg'), 
+    profile: require('../../assets/images/profile.jpg'),
   };
-  
+
+ 

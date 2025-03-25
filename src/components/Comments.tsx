@@ -34,13 +34,15 @@ export const Comments = () => {
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.container}>
-        {/* Show only the first comment initially */}
+        {/* Show "Comments (number)" instead of username */}
         {!isExpanded && comments.length > 0 && (
           <TouchableOpacity
             onPress={() => setIsExpanded(true)}
             style={styles.singleComment}
           >
-            <Text style={styles.username}>{comments[0].user}</Text>
+            <Text style={styles.commentHeader}>
+              Comments ({comments.length})
+            </Text>
             <Text style={styles.commentText}>{comments[0].text}</Text>
             <Text style={styles.timestamp}>{comments[0].timestamp}</Text>
           </TouchableOpacity>
@@ -109,6 +111,11 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ddd",
     borderTopWidth: 0.5,
     borderTopColor: "#ddd",
+  },
+  commentHeader: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 5,
   },
   expandedSection: {
     padding: 10,

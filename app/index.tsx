@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { ReactConfrences } from "@/src/components/ReactConfrences";
 import { LikesCarousel } from "@/src/components/LikesCarousel";
+import { Comments } from "@/src/components/Comments";
 
 export default function Index() {
   return (
@@ -14,6 +15,7 @@ export default function Index() {
         <ReactQuery />
         <ReactConfrences />
         <LikesCarousel />
+        <Comments />
       </View>
     </SafeAreaView>
   );
